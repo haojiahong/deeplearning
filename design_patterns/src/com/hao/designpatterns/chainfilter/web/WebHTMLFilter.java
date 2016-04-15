@@ -7,9 +7,9 @@ public class WebHTMLFilter implements WebFilter {
 			WebFilterChain webFilterChain) {
 		request.setRequestStr(request.getRequestStr().replace("<", "{")
 				.replace(">", "}")
-				+ getClass().getName());
+				+ getClass().getSimpleName());
 		webFilterChain.doFilter(request, response, webFilterChain);
-		response.setResponseStr(response.getResponseStr()+getClass().getName());
+		response.setResponseStr(response.getResponseStr()+getClass().getSimpleName());
 
 	}
 

@@ -6,10 +6,10 @@ public class WebSesitiveFilter implements WebFilter {
 	public void doFilter(Request request, Response response,
 			WebFilterChain webFilterChain) {
 		request.setRequestStr(request.getRequestStr().replace("敏感", "")
-				+ getClass().getName());
+				+ getClass().getSimpleName());
 		webFilterChain.doFilter(request, response, webFilterChain);
 		response.setResponseStr(response.getResponseStr()
-				+ getClass().getName());
+				+ getClass().getSimpleName());
 
 	}
 

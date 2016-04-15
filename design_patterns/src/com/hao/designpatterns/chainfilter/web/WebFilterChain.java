@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * 模拟web过滤器链 1、FilterChain实现了Filter，方便filterchain添加filterchain。
  * 2、doFilter中加入webFilterChain参数，实现过滤器链的记忆（记忆下一个filter），即过滤器链的堆栈形式。
+ * 代码在嵌套，所以，当开始跳出嵌套的时候，它就实现了堆栈的形式。
  * 
  * @author haojiahong
  *
